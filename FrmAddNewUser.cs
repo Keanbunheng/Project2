@@ -22,7 +22,9 @@ namespace Project2
         }
         private void FrmAddNewUser_Load(object sender, EventArgs e)
         {
-
+            MessageBox.Show("work");
+            MessageBox.Show("Work2");
+            
         }
 
         void ClearColumn()
