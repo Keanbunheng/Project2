@@ -22,32 +22,29 @@ namespace Project2
         }
         private void FrmAddNewUser_Load(object sender, EventArgs e)
         {
-            MessageBox.Show("work");
-            MessageBox.Show("Work2");
-            MessageBox.Show("Work3");
-            MessageBox.Show("Hello");
+
         }
 
         void ClearColumn()
         {
-          
+
         }
         void GetVariableValue()
         {
-           
+
         }
         private async void btnUpdate_Click(object sender, EventArgs e)
         {
-          
+
         }
         private async void button2_Click(object sender, EventArgs e)
         {
-         
+
         }
 
         private async void btnAddNew_Click(object sender, EventArgs e)
         {
-           
+
         }
 
         private async void dgvStudentListRegister_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -77,6 +74,38 @@ namespace Project2
         private void dgvStudentListRegister_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void label2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void picUrl_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnInfoInput_SizeChanged(object sender, EventArgs e)
+        {
+            //pnInfoInput.Width = 1000;
+        }
+
+        private void tableLayoutPanel1_SizeChanged(object sender, EventArgs e)
+        {
+            if (tableLayoutPanel1.ColumnStyles.Count > 0)
+            {
+                // Option A: Set a fixed width in pixels (e.g., 200px)
+                tableLayoutPanel1.ColumnStyles[0].SizeType = SizeType.Percent;
+                tableLayoutPanel1.ColumnStyles[0].Width = 30;
+                pnPicture.Width += 15;
+                pnPicture.Width += 10;
+            }
         }
     }
 }
