@@ -28,9 +28,9 @@
         /// </summary>
         private void InitializeComponent()
         {
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle16 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle17 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle18 = new DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddNewUser));
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
@@ -44,7 +44,7 @@
             label10 = new Label();
             label9 = new Label();
             gbGender = new GroupBox();
-            panel4 = new Panel();
+            pnGender = new Panel();
             rbtnFemale = new RadioButton();
             rbtnMale = new RadioButton();
             label4 = new Label();
@@ -84,7 +84,7 @@
             pnPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picUrl).BeginInit();
             gbGender.SuspendLayout();
-            panel4.SuspendLayout();
+            pnGender.SuspendLayout();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
             panel5.SuspendLayout();
@@ -170,7 +170,7 @@
             pnPicture.Controls.Add(btnUpload);
             pnPicture.Controls.Add(picUrl);
             pnPicture.Controls.Add(btnDownload);
-            pnPicture.Location = new Point(18, 15);
+            pnPicture.Location = new Point(21, 15);
             pnPicture.Name = "pnPicture";
             pnPicture.Size = new Size(218, 247);
             pnPicture.TabIndex = 27;
@@ -184,6 +184,7 @@
             btnUpload.TabIndex = 0;
             btnUpload.Text = "Upload";
             btnUpload.UseVisualStyleBackColor = true;
+            btnUpload.Click += btnUpload_Click;
             // 
             // picUrl
             // 
@@ -239,30 +240,30 @@
             // 
             // gbGender
             // 
-            gbGender.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            gbGender.Controls.Add(panel4);
-            gbGender.Location = new Point(255, 160);
+            gbGender.Controls.Add(pnGender);
+            gbGender.Location = new Point(255, 159);
             gbGender.Name = "gbGender";
             gbGender.Size = new Size(372, 57);
             gbGender.TabIndex = 17;
             gbGender.TabStop = false;
             gbGender.Text = "Gender";
+            gbGender.Enter += gbGender_Enter;
             // 
-            // panel4
+            // pnGender
             // 
-            panel4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            panel4.Controls.Add(rbtnFemale);
-            panel4.Controls.Add(rbtnMale);
-            panel4.Location = new Point(194, 20);
-            panel4.Name = "panel4";
-            panel4.Size = new Size(172, 32);
-            panel4.TabIndex = 2;
+            pnGender.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            pnGender.Controls.Add(rbtnFemale);
+            pnGender.Controls.Add(rbtnMale);
+            pnGender.Location = new Point(183, 19);
+            pnGender.Name = "pnGender";
+            pnGender.Size = new Size(183, 32);
+            pnGender.TabIndex = 2;
             // 
             // rbtnFemale
             // 
             rbtnFemale.AutoSize = true;
             rbtnFemale.Dock = DockStyle.Right;
-            rbtnFemale.Location = new Point(76, 0);
+            rbtnFemale.Location = new Point(13, 0);
             rbtnFemale.Name = "rbtnFemale";
             rbtnFemale.Size = new Size(96, 32);
             rbtnFemale.TabIndex = 1;
@@ -273,8 +274,8 @@
             // rbtnMale
             // 
             rbtnMale.AutoSize = true;
-            rbtnMale.Dock = DockStyle.Left;
-            rbtnMale.Location = new Point(0, 0);
+            rbtnMale.Dock = DockStyle.Right;
+            rbtnMale.Location = new Point(109, 0);
             rbtnMale.Name = "rbtnMale";
             rbtnMale.Size = new Size(74, 32);
             rbtnMale.TabIndex = 0;
@@ -498,14 +499,14 @@
             dgvStudentListRegister.AllowUserToResizeRows = false;
             dgvStudentListRegister.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvStudentListRegister.BackgroundColor = Color.Gainsboro;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.HotPink;
-            dataGridViewCellStyle1.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvStudentListRegister.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle16.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle16.BackColor = Color.HotPink;
+            dataGridViewCellStyle16.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle16.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle16.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle16.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle16.WrapMode = DataGridViewTriState.True;
+            dgvStudentListRegister.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle16;
             dgvStudentListRegister.ColumnHeadersHeight = 45;
             dgvStudentListRegister.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgvStudentListRegister.Columns.AddRange(new DataGridViewColumn[] { ColumnID, ColumnFirstName, ColumnLastName, ColumnDOB, ColumnGender, ColumnPhone, ColumnAddress, Pictures });
@@ -515,20 +516,20 @@
             dgvStudentListRegister.MultiSelect = false;
             dgvStudentListRegister.Name = "dgvStudentListRegister";
             dgvStudentListRegister.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.LightGray;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvStudentListRegister.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle17.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle17.BackColor = SystemColors.Control;
+            dataGridViewCellStyle17.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle17.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle17.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle17.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle17.WrapMode = DataGridViewTriState.True;
+            dgvStudentListRegister.RowHeadersDefaultCellStyle = dataGridViewCellStyle17;
             dgvStudentListRegister.RowHeadersVisible = false;
             dgvStudentListRegister.RowHeadersWidth = 51;
             dgvStudentListRegister.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.MenuHighlight;
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dgvStudentListRegister.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle18.SelectionBackColor = SystemColors.MenuHighlight;
+            dataGridViewCellStyle18.SelectionForeColor = Color.White;
+            dgvStudentListRegister.RowsDefaultCellStyle = dataGridViewCellStyle18;
             dgvStudentListRegister.RowTemplate.Height = 40;
             dgvStudentListRegister.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvStudentListRegister.Size = new Size(825, 754);
@@ -648,8 +649,8 @@
             pnPicture.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)picUrl).EndInit();
             gbGender.ResumeLayout(false);
-            panel4.ResumeLayout(false);
-            panel4.PerformLayout();
+            pnGender.ResumeLayout(false);
+            pnGender.PerformLayout();
             panel1.ResumeLayout(false);
             panel3.ResumeLayout(false);
             panel5.ResumeLayout(false);
@@ -676,7 +677,7 @@
         private Label label10;
         private Label label9;
         private GroupBox gbGender;
-        private Panel panel4;
+        private Panel pnGender;
         private RadioButton rbtnFemale;
         private RadioButton rbtnMale;
         private Label label4;
@@ -685,8 +686,6 @@
         private Label label3;
         private TextBox txtPhotoUrl;
         private TextBox txtFirstName;
-        private Label label2;
-        private TextBox txtId;
         private Panel panel5;
         private Panel pnDataGrid;
         private Panel panel7;
@@ -710,5 +709,7 @@
         private DataGridViewTextBoxColumn ColumnPhone;
         private DataGridViewTextBoxColumn ColumnAddress;
         private DataGridViewImageColumn Pictures;
+        private Label label2;
+        private TextBox txtId;
     }
 }

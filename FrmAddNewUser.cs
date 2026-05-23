@@ -108,5 +108,14 @@ namespace Project2
             }
         }
 
+        private void btnUpload_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void gbGender_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }

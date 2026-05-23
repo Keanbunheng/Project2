@@ -12,7 +12,8 @@ namespace Project2
             // see https://aka.ms/applicationconfiguration.
             ApplicationConfiguration.Initialize();
             //Application.Run(new FrmLogin());
-            Application.Run(new FrmAddNewUser());
+            //Application.Run(new FrmAddNewUser());
+            Application.Run(new AddStudentForm());
         }
     }
 }
