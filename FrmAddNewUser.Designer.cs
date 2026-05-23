@@ -29,16 +29,18 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddNewUser));
-            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             pnInfoInput = new Panel();
+            dtpBD = new DateTimePicker();
             pnPicture = new Panel();
             btnUpload = new Button();
             picUrl = new PictureBox();
             btnDownload = new Button();
+            txtPhotoUrl = new TextBox();
             label10 = new Label();
             label9 = new Label();
             gbGender = new GroupBox();
@@ -65,12 +67,7 @@
             panel6 = new Panel();
             lbStuCount = new Label();
             label12 = new Label();
-            txtPhotoUrl = new TextBox();
             dgvStudentListRegister = new DataGridView();
-            panel7 = new Panel();
-            btnSearch = new Button();
-            txtSearch = new TextBox();
-            dtpBD = new DateTimePicker();
             ColumnID = new DataGridViewTextBoxColumn();
             ColumnFirstName = new DataGridViewTextBoxColumn();
             ColumnLastName = new DataGridViewTextBoxColumn();
@@ -79,6 +76,9 @@
             ColumnPhone = new DataGridViewTextBoxColumn();
             ColumnAddress = new DataGridViewTextBoxColumn();
             Pictures = new DataGridViewImageColumn();
+            panel7 = new Panel();
+            btnSearch = new Button();
+            txtSearch = new TextBox();
             tableLayoutPanel1.SuspendLayout();
             pnInfoInput.SuspendLayout();
             pnPicture.SuspendLayout();
@@ -152,6 +152,18 @@
             pnInfoInput.TabIndex = 4;
             pnInfoInput.SizeChanged += pnInfoInput_SizeChanged;
             // 
+            // dtpBD
+            // 
+            dtpBD.CalendarTrailingForeColor = Color.LightGray;
+            dtpBD.CustomFormat = "dd/mm/yyyy";
+            dtpBD.Format = DateTimePickerFormat.Custom;
+            dtpBD.Location = new Point(359, 102);
+            dtpBD.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
+            dtpBD.MinDate = new DateTime(2000, 12, 1, 0, 0, 0, 0);
+            dtpBD.Name = "dtpBD";
+            dtpBD.Size = new Size(268, 40);
+            dtpBD.TabIndex = 28;
+            // 
             // pnPicture
             // 
             pnPicture.Anchor = AnchorStyles.Top;
@@ -195,6 +207,17 @@
             btnDownload.Text = "Download";
             btnDownload.UseVisualStyleBackColor = true;
             btnDownload.Click += button5_Click;
+            // 
+            // txtPhotoUrl
+            // 
+            txtPhotoUrl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtPhotoUrl.Location = new Point(22, 787);
+            txtPhotoUrl.Name = "txtPhotoUrl";
+            txtPhotoUrl.PlaceholderText = "ImageURl";
+            txtPhotoUrl.Size = new Size(268, 40);
+            txtPhotoUrl.TabIndex = 5;
+            txtPhotoUrl.Visible = false;
+            txtPhotoUrl.TextChanged += txtPhotoUrl_TextChanged;
             // 
             // label10
             // 
@@ -453,7 +476,6 @@
             lbStuCount.TabIndex = 24;
             lbStuCount.Text = "00";
             lbStuCount.TextAlign = ContentAlignment.MiddleLeft;
-            lbStuCount.Click += label13_Click;
             // 
             // label12
             // 
@@ -468,17 +490,6 @@
             label12.Text = "     Total Students:";
             label12.TextAlign = ContentAlignment.MiddleLeft;
             // 
-            // txtPhotoUrl
-            // 
-            txtPhotoUrl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtPhotoUrl.Location = new Point(22, 787);
-            txtPhotoUrl.Name = "txtPhotoUrl";
-            txtPhotoUrl.PlaceholderText = "ImageURl";
-            txtPhotoUrl.Size = new Size(268, 40);
-            txtPhotoUrl.TabIndex = 5;
-            txtPhotoUrl.Visible = false;
-            txtPhotoUrl.TextChanged += txtPhotoUrl_TextChanged;
-            // 
             // dgvStudentListRegister
             // 
             dgvStudentListRegister.AllowUserToAddRows = false;
@@ -487,14 +498,14 @@
             dgvStudentListRegister.AllowUserToResizeRows = false;
             dgvStudentListRegister.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvStudentListRegister.BackgroundColor = Color.Gainsboro;
-            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = Color.HotPink;
-            dataGridViewCellStyle4.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
-            dgvStudentListRegister.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = Color.HotPink;
+            dataGridViewCellStyle1.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
+            dgvStudentListRegister.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
             dgvStudentListRegister.ColumnHeadersHeight = 45;
             dgvStudentListRegister.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             dgvStudentListRegister.Columns.AddRange(new DataGridViewColumn[] { ColumnID, ColumnFirstName, ColumnLastName, ColumnDOB, ColumnGender, ColumnPhone, ColumnAddress, Pictures });
@@ -504,66 +515,25 @@
             dgvStudentListRegister.MultiSelect = false;
             dgvStudentListRegister.Name = "dgvStudentListRegister";
             dgvStudentListRegister.ReadOnly = true;
-            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle5.BackColor = SystemColors.Control;
-            dataGridViewCellStyle5.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle5.SelectionBackColor = Color.LightGray;
-            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
-            dgvStudentListRegister.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = SystemColors.Control;
+            dataGridViewCellStyle2.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
+            dgvStudentListRegister.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
             dgvStudentListRegister.RowHeadersVisible = false;
             dgvStudentListRegister.RowHeadersWidth = 51;
             dgvStudentListRegister.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle6.SelectionBackColor = SystemColors.MenuHighlight;
-            dataGridViewCellStyle6.SelectionForeColor = Color.White;
-            dgvStudentListRegister.RowsDefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle3.SelectionBackColor = SystemColors.MenuHighlight;
+            dataGridViewCellStyle3.SelectionForeColor = Color.White;
+            dgvStudentListRegister.RowsDefaultCellStyle = dataGridViewCellStyle3;
             dgvStudentListRegister.RowTemplate.Height = 40;
             dgvStudentListRegister.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvStudentListRegister.Size = new Size(825, 754);
             dgvStudentListRegister.TabIndex = 2;
             dgvStudentListRegister.CellContentClick += dgvStudentListRegister_CellContentClick_1;
-            // 
-            // panel7
-            // 
-            panel7.Controls.Add(btnSearch);
-            panel7.Controls.Add(txtSearch);
-            panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(0, 0);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(835, 75);
-            panel7.TabIndex = 0;
-            // 
-            // btnSearch
-            // 
-            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            btnSearch.Location = new Point(661, 15);
-            btnSearch.Name = "btnSearch";
-            btnSearch.Size = new Size(142, 40);
-            btnSearch.TabIndex = 7;
-            btnSearch.Text = "Clear";
-            btnSearch.UseVisualStyleBackColor = true;
-            // 
-            // txtSearch
-            // 
-            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            txtSearch.Location = new Point(369, 15);
-            txtSearch.Name = "txtSearch";
-            txtSearch.PlaceholderText = "    Search bar";
-            txtSearch.Size = new Size(275, 40);
-            txtSearch.TabIndex = 3;
-            // 
-            // dtpBD
-            // 
-            dtpBD.CalendarTrailingForeColor = Color.LightGray;
-            dtpBD.CustomFormat = "dd/mm/yyyy";
-            dtpBD.Format = DateTimePickerFormat.Custom;
-            dtpBD.Location = new Point(359, 102);
-            dtpBD.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
-            dtpBD.MinDate = new DateTime(2000, 12, 1, 0, 0, 0, 0);
-            dtpBD.Name = "dtpBD";
-            dtpBD.Size = new Size(268, 40);
-            dtpBD.TabIndex = 28;
             // 
             // ColumnID
             // 
@@ -632,6 +602,35 @@
             Pictures.ReadOnly = true;
             Pictures.Resizable = DataGridViewTriState.False;
             Pictures.SortMode = DataGridViewColumnSortMode.Automatic;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(btnSearch);
+            panel7.Controls.Add(txtSearch);
+            panel7.Dock = DockStyle.Top;
+            panel7.Location = new Point(0, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(835, 75);
+            panel7.TabIndex = 0;
+            // 
+            // btnSearch
+            // 
+            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            btnSearch.Location = new Point(661, 15);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(142, 40);
+            btnSearch.TabIndex = 7;
+            btnSearch.Text = "Search";
+            btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            txtSearch.Location = new Point(369, 15);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "    Search bar";
+            txtSearch.Size = new Size(275, 40);
+            txtSearch.TabIndex = 3;
             // 
             // FrmAddNewUser
             // 
