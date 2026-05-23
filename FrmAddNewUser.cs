@@ -107,5 +107,10 @@ namespace Project2
                 pnPicture.Width += 10;
             }
         }
+
+        private void label13_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

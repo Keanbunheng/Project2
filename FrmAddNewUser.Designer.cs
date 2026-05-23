@@ -29,63 +29,61 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddNewUser));
-            DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
-            DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle4 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle5 = new DataGridViewCellStyle();
+            DataGridViewCellStyle dataGridViewCellStyle6 = new DataGridViewCellStyle();
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             pnInfoInput = new Panel();
             pnPicture = new Panel();
-            button3 = new Button();
+            btnUpload = new Button();
             picUrl = new PictureBox();
-            button5 = new Button();
+            btnDownload = new Button();
             label10 = new Label();
             label9 = new Label();
-            groupBox1 = new GroupBox();
+            gbGender = new GroupBox();
             panel4 = new Panel();
             rbtnFemale = new RadioButton();
             rbtnMale = new RadioButton();
             label4 = new Label();
-            textBox4 = new TextBox();
-            textBox3 = new TextBox();
-            txtName = new TextBox();
+            txtAddress = new TextBox();
+            txtPhone = new TextBox();
             label5 = new Label();
-            txtPassCf = new TextBox();
+            txtLastName = new TextBox();
             label3 = new Label();
-            txtPassword = new TextBox();
+            txtFirstName = new TextBox();
             label2 = new Label();
-            txtEmail = new TextBox();
+            txtId = new TextBox();
             panel1 = new Panel();
             panel3 = new Panel();
             btnClear = new Button();
             btnAddNew = new Button();
-            btnUpdate = new Button();
-            btnGetData = new Button();
+            btnRemove = new Button();
+            btnEdit = new Button();
             panel5 = new Panel();
             pnDataGrid = new Panel();
             panel6 = new Panel();
-            label13 = new Label();
+            lbStuCount = new Label();
             label12 = new Label();
             txtPhotoUrl = new TextBox();
             dgvStudentListRegister = new DataGridView();
-            ColumnID = new DataGridViewTextBoxColumn();
-            ColumnName = new DataGridViewTextBoxColumn();
-            ColumnGender = new DataGridViewTextBoxColumn();
-            ColumnEmail = new DataGridViewTextBoxColumn();
-            ColumnPassword = new DataGridViewTextBoxColumn();
-            ColumnDOB = new DataGridViewTextBoxColumn();
-            ColumnActive = new DataGridViewTextBoxColumn();
-            ColumnScore = new DataGridViewTextBoxColumn();
-            ColumnSession = new DataGridViewTextBoxColumn();
-            ColumnStatus = new DataGridViewTextBoxColumn();
             panel7 = new Panel();
-            button2 = new Button();
-            textBox1 = new TextBox();
+            btnSearch = new Button();
+            txtSearch = new TextBox();
+            dtpBD = new DateTimePicker();
+            ColumnID = new DataGridViewTextBoxColumn();
+            ColumnFirstName = new DataGridViewTextBoxColumn();
+            ColumnLastName = new DataGridViewTextBoxColumn();
+            ColumnDOB = new DataGridViewTextBoxColumn();
+            ColumnGender = new DataGridViewTextBoxColumn();
+            ColumnPhone = new DataGridViewTextBoxColumn();
+            ColumnAddress = new DataGridViewTextBoxColumn();
+            Pictures = new DataGridViewImageColumn();
             tableLayoutPanel1.SuspendLayout();
             pnInfoInput.SuspendLayout();
             pnPicture.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)picUrl).BeginInit();
-            groupBox1.SuspendLayout();
+            gbGender.SuspendLayout();
             panel4.SuspendLayout();
             panel1.SuspendLayout();
             panel3.SuspendLayout();
@@ -132,20 +130,21 @@
             // 
             // pnInfoInput
             // 
+            pnInfoInput.Controls.Add(dtpBD);
             pnInfoInput.Controls.Add(pnPicture);
+            pnInfoInput.Controls.Add(txtPhotoUrl);
             pnInfoInput.Controls.Add(label10);
             pnInfoInput.Controls.Add(label9);
-            pnInfoInput.Controls.Add(groupBox1);
+            pnInfoInput.Controls.Add(gbGender);
             pnInfoInput.Controls.Add(label4);
-            pnInfoInput.Controls.Add(textBox4);
-            pnInfoInput.Controls.Add(textBox3);
-            pnInfoInput.Controls.Add(txtName);
+            pnInfoInput.Controls.Add(txtAddress);
+            pnInfoInput.Controls.Add(txtPhone);
             pnInfoInput.Controls.Add(label5);
-            pnInfoInput.Controls.Add(txtPassCf);
+            pnInfoInput.Controls.Add(txtLastName);
             pnInfoInput.Controls.Add(label3);
-            pnInfoInput.Controls.Add(txtPassword);
+            pnInfoInput.Controls.Add(txtFirstName);
             pnInfoInput.Controls.Add(label2);
-            pnInfoInput.Controls.Add(txtEmail);
+            pnInfoInput.Controls.Add(txtId);
             pnInfoInput.Dock = DockStyle.Fill;
             pnInfoInput.Location = new Point(3, 3);
             pnInfoInput.Name = "pnInfoInput";
@@ -156,23 +155,23 @@
             // pnPicture
             // 
             pnPicture.Anchor = AnchorStyles.Top;
-            pnPicture.Controls.Add(button3);
+            pnPicture.Controls.Add(btnUpload);
             pnPicture.Controls.Add(picUrl);
-            pnPicture.Controls.Add(button5);
+            pnPicture.Controls.Add(btnDownload);
             pnPicture.Location = new Point(18, 15);
             pnPicture.Name = "pnPicture";
-            pnPicture.Size = new Size(203, 247);
+            pnPicture.Size = new Size(218, 247);
             pnPicture.TabIndex = 27;
             // 
-            // button3
+            // btnUpload
             // 
-            button3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
-            button3.Location = new Point(4, 207);
-            button3.Name = "button3";
-            button3.Size = new Size(95, 35);
-            button3.TabIndex = 0;
-            button3.Text = "Submit";
-            button3.UseVisualStyleBackColor = true;
+            btnUpload.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left;
+            btnUpload.Location = new Point(4, 207);
+            btnUpload.Name = "btnUpload";
+            btnUpload.Size = new Size(95, 35);
+            btnUpload.TabIndex = 0;
+            btnUpload.Text = "Upload";
+            btnUpload.UseVisualStyleBackColor = true;
             // 
             // picUrl
             // 
@@ -180,22 +179,22 @@
             picUrl.Image = (Image)resources.GetObject("picUrl.Image");
             picUrl.Location = new Point(4, 3);
             picUrl.Name = "picUrl";
-            picUrl.Size = new Size(193, 198);
+            picUrl.Size = new Size(208, 198);
             picUrl.SizeMode = PictureBoxSizeMode.StretchImage;
             picUrl.TabIndex = 26;
             picUrl.TabStop = false;
             picUrl.Click += picUrl_Click;
             // 
-            // button5
+            // btnDownload
             // 
-            button5.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            button5.Location = new Point(105, 207);
-            button5.Name = "button5";
-            button5.Size = new Size(92, 35);
-            button5.TabIndex = 1;
-            button5.Text = "Get Data";
-            button5.UseVisualStyleBackColor = true;
-            button5.Click += button5_Click;
+            btnDownload.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            btnDownload.Location = new Point(105, 207);
+            btnDownload.Name = "btnDownload";
+            btnDownload.Size = new Size(107, 35);
+            btnDownload.TabIndex = 1;
+            btnDownload.Text = "Download";
+            btnDownload.UseVisualStyleBackColor = true;
+            btnDownload.Click += button5_Click;
             // 
             // label10
             // 
@@ -215,16 +214,16 @@
             label9.TabIndex = 19;
             label9.Text = "Phone:";
             // 
-            // groupBox1
+            // gbGender
             // 
-            groupBox1.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            groupBox1.Controls.Add(panel4);
-            groupBox1.Location = new Point(255, 160);
-            groupBox1.Name = "groupBox1";
-            groupBox1.Size = new Size(372, 57);
-            groupBox1.TabIndex = 17;
-            groupBox1.TabStop = false;
-            groupBox1.Text = "Gender";
+            gbGender.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            gbGender.Controls.Add(panel4);
+            gbGender.Location = new Point(255, 160);
+            gbGender.Name = "gbGender";
+            gbGender.Size = new Size(372, 57);
+            gbGender.TabIndex = 17;
+            gbGender.TabStop = false;
+            gbGender.Text = "Gender";
             // 
             // panel4
             // 
@@ -270,33 +269,24 @@
             label4.TabIndex = 10;
             label4.Text = "BirthDate";
             // 
-            // textBox4
+            // txtAddress
             // 
-            textBox4.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            textBox4.Location = new Point(22, 501);
-            textBox4.Multiline = true;
-            textBox4.Name = "textBox4";
-            textBox4.PlaceholderText = "username";
-            textBox4.Size = new Size(605, 287);
-            textBox4.TabIndex = 9;
+            txtAddress.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            txtAddress.Location = new Point(22, 501);
+            txtAddress.Multiline = true;
+            txtAddress.Name = "txtAddress";
+            txtAddress.PlaceholderText = "    Character range allow (8 ~ 255)";
+            txtAddress.Size = new Size(605, 287);
+            txtAddress.TabIndex = 9;
             // 
-            // textBox3
+            // txtPhone
             // 
-            textBox3.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            textBox3.Location = new Point(173, 406);
-            textBox3.Name = "textBox3";
-            textBox3.PlaceholderText = "username";
-            textBox3.Size = new Size(454, 40);
-            textBox3.TabIndex = 9;
-            // 
-            // txtName
-            // 
-            txtName.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtName.Location = new Point(359, 102);
-            txtName.Name = "txtName";
-            txtName.PlaceholderText = "username";
-            txtName.Size = new Size(268, 40);
-            txtName.TabIndex = 9;
+            txtPhone.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtPhone.Location = new Point(173, 406);
+            txtPhone.Name = "txtPhone";
+            txtPhone.PlaceholderText = "+855 0********";
+            txtPhone.Size = new Size(454, 40);
+            txtPhone.TabIndex = 9;
             // 
             // label5
             // 
@@ -307,13 +297,14 @@
             label5.TabIndex = 8;
             label5.Text = "LastName:";
             // 
-            // txtPassCf
+            // txtLastName
             // 
-            txtPassCf.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtPassCf.Location = new Point(173, 351);
-            txtPassCf.Name = "txtPassCf";
-            txtPassCf.Size = new Size(454, 40);
-            txtPassCf.TabIndex = 7;
+            txtLastName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtLastName.Location = new Point(173, 351);
+            txtLastName.Name = "txtLastName";
+            txtLastName.PlaceholderText = "(5 ~ 50 characters at least)";
+            txtLastName.Size = new Size(454, 40);
+            txtLastName.TabIndex = 7;
             // 
             // label3
             // 
@@ -324,14 +315,14 @@
             label3.TabIndex = 6;
             label3.Text = "FirstName:";
             // 
-            // txtPassword
+            // txtFirstName
             // 
-            txtPassword.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
-            txtPassword.Location = new Point(175, 296);
-            txtPassword.Name = "txtPassword";
-            txtPassword.PlaceholderText = "(8 ~ 20 characters at least)";
-            txtPassword.Size = new Size(452, 40);
-            txtPassword.TabIndex = 5;
+            txtFirstName.Anchor = AnchorStyles.Top | AnchorStyles.Left | AnchorStyles.Right;
+            txtFirstName.Location = new Point(175, 296);
+            txtFirstName.Name = "txtFirstName";
+            txtFirstName.PlaceholderText = "(2 ~ 20 characters at least)";
+            txtFirstName.Size = new Size(452, 40);
+            txtFirstName.TabIndex = 5;
             // 
             // label2
             // 
@@ -344,14 +335,14 @@
             label2.Text = "ID:";
             label2.Click += label2_Click;
             // 
-            // txtEmail
+            // txtId
             // 
-            txtEmail.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtEmail.Location = new Point(359, 42);
-            txtEmail.Name = "txtEmail";
-            txtEmail.PlaceholderText = "example@gmail.com";
-            txtEmail.Size = new Size(268, 40);
-            txtEmail.TabIndex = 3;
+            txtId.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            txtId.Location = new Point(359, 42);
+            txtId.Name = "txtId";
+            txtId.PlaceholderText = "User ID";
+            txtId.Size = new Size(268, 40);
+            txtId.TabIndex = 3;
             // 
             // panel1
             // 
@@ -368,8 +359,8 @@
             panel3.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
             panel3.Controls.Add(btnClear);
             panel3.Controls.Add(btnAddNew);
-            panel3.Controls.Add(btnUpdate);
-            panel3.Controls.Add(btnGetData);
+            panel3.Controls.Add(btnRemove);
+            panel3.Controls.Add(btnEdit);
             panel3.Location = new Point(452, 3);
             panel3.Name = "panel3";
             panel3.Size = new Size(615, 80);
@@ -382,7 +373,7 @@
             btnClear.Name = "btnClear";
             btnClear.Size = new Size(137, 57);
             btnClear.TabIndex = 3;
-            btnClear.Text = "Clear";
+            btnClear.Text = "Reset";
             btnClear.UseVisualStyleBackColor = true;
             btnClear.Click += btnClear_Click;
             // 
@@ -393,31 +384,31 @@
             btnAddNew.Name = "btnAddNew";
             btnAddNew.Size = new Size(137, 57);
             btnAddNew.TabIndex = 0;
-            btnAddNew.Text = "Submit";
+            btnAddNew.Text = "Add";
             btnAddNew.UseVisualStyleBackColor = true;
             btnAddNew.Click += btnAddNew_Click;
             // 
-            // btnUpdate
+            // btnRemove
             // 
-            btnUpdate.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            btnUpdate.Location = new Point(310, 17);
-            btnUpdate.Name = "btnUpdate";
-            btnUpdate.Size = new Size(137, 57);
-            btnUpdate.TabIndex = 2;
-            btnUpdate.Text = "Update";
-            btnUpdate.UseVisualStyleBackColor = true;
-            btnUpdate.Click += btnUpdate_Click;
+            btnRemove.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btnRemove.Location = new Point(310, 17);
+            btnRemove.Name = "btnRemove";
+            btnRemove.Size = new Size(137, 57);
+            btnRemove.TabIndex = 2;
+            btnRemove.Text = "Remove";
+            btnRemove.UseVisualStyleBackColor = true;
+            btnRemove.Click += btnUpdate_Click;
             // 
-            // btnGetData
+            // btnEdit
             // 
-            btnGetData.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
-            btnGetData.Location = new Point(165, 17);
-            btnGetData.Name = "btnGetData";
-            btnGetData.Size = new Size(137, 57);
-            btnGetData.TabIndex = 1;
-            btnGetData.Text = "Get Data";
-            btnGetData.UseVisualStyleBackColor = true;
-            btnGetData.Click += button2_Click;
+            btnEdit.Anchor = AnchorStyles.Top | AnchorStyles.Bottom;
+            btnEdit.Location = new Point(165, 17);
+            btnEdit.Name = "btnEdit";
+            btnEdit.Size = new Size(137, 57);
+            btnEdit.TabIndex = 1;
+            btnEdit.Text = "Edit";
+            btnEdit.UseVisualStyleBackColor = true;
+            btnEdit.Click += button2_Click;
             // 
             // panel5
             // 
@@ -442,27 +433,27 @@
             // 
             // panel6
             // 
-            panel6.Controls.Add(label13);
+            panel6.Controls.Add(lbStuCount);
             panel6.Controls.Add(label12);
-            panel6.Controls.Add(txtPhotoUrl);
             panel6.Dock = DockStyle.Bottom;
             panel6.Location = new Point(0, 712);
             panel6.Name = "panel6";
             panel6.Size = new Size(825, 44);
             panel6.TabIndex = 3;
             // 
-            // label13
+            // lbStuCount
             // 
-            label13.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            label13.BackColor = Color.DarkMagenta;
-            label13.Font = new Font("Khmer OS Siemreap", 12.8F);
-            label13.ForeColor = SystemColors.ControlLightLight;
-            label13.Location = new Point(761, 3);
-            label13.Name = "label13";
-            label13.Size = new Size(44, 37);
-            label13.TabIndex = 24;
-            label13.Text = "00";
-            label13.TextAlign = ContentAlignment.MiddleLeft;
+            lbStuCount.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            lbStuCount.BackColor = Color.DarkMagenta;
+            lbStuCount.Font = new Font("Khmer OS Siemreap", 12.8F);
+            lbStuCount.ForeColor = SystemColors.ControlLightLight;
+            lbStuCount.Location = new Point(761, 3);
+            lbStuCount.Name = "lbStuCount";
+            lbStuCount.Size = new Size(44, 37);
+            lbStuCount.TabIndex = 24;
+            lbStuCount.Text = "00";
+            lbStuCount.TextAlign = ContentAlignment.MiddleLeft;
+            lbStuCount.Click += label13_Click;
             // 
             // label12
             // 
@@ -480,7 +471,7 @@
             // txtPhotoUrl
             // 
             txtPhotoUrl.Anchor = AnchorStyles.Top | AnchorStyles.Right;
-            txtPhotoUrl.Location = new Point(45, 5);
+            txtPhotoUrl.Location = new Point(22, 787);
             txtPhotoUrl.Name = "txtPhotoUrl";
             txtPhotoUrl.PlaceholderText = "ImageURl";
             txtPhotoUrl.Size = new Size(268, 40);
@@ -496,42 +487,83 @@
             dgvStudentListRegister.AllowUserToResizeRows = false;
             dgvStudentListRegister.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dgvStudentListRegister.BackgroundColor = Color.Gainsboro;
-            dataGridViewCellStyle1.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = Color.HotPink;
-            dataGridViewCellStyle1.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle1.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = DataGridViewTriState.True;
-            dgvStudentListRegister.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = Color.HotPink;
+            dataGridViewCellStyle4.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle4.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = DataGridViewTriState.True;
+            dgvStudentListRegister.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             dgvStudentListRegister.ColumnHeadersHeight = 45;
             dgvStudentListRegister.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
-            dgvStudentListRegister.Columns.AddRange(new DataGridViewColumn[] { ColumnID, ColumnName, ColumnGender, ColumnEmail, ColumnPassword, ColumnDOB, ColumnActive, ColumnScore, ColumnSession, ColumnStatus });
+            dgvStudentListRegister.Columns.AddRange(new DataGridViewColumn[] { ColumnID, ColumnFirstName, ColumnLastName, ColumnDOB, ColumnGender, ColumnPhone, ColumnAddress, Pictures });
             dgvStudentListRegister.Dock = DockStyle.Fill;
             dgvStudentListRegister.EnableHeadersVisualStyles = false;
             dgvStudentListRegister.Location = new Point(0, 2);
             dgvStudentListRegister.MultiSelect = false;
             dgvStudentListRegister.Name = "dgvStudentListRegister";
             dgvStudentListRegister.ReadOnly = true;
-            dataGridViewCellStyle2.Alignment = DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = SystemColors.Control;
-            dataGridViewCellStyle2.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            dataGridViewCellStyle2.ForeColor = SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = Color.LightGray;
-            dataGridViewCellStyle2.SelectionForeColor = SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = DataGridViewTriState.True;
-            dgvStudentListRegister.RowHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = SystemColors.Control;
+            dataGridViewCellStyle5.Font = new Font("Khmer OS Siemreap", 10.8F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            dataGridViewCellStyle5.ForeColor = SystemColors.WindowText;
+            dataGridViewCellStyle5.SelectionBackColor = Color.LightGray;
+            dataGridViewCellStyle5.SelectionForeColor = SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = DataGridViewTriState.True;
+            dgvStudentListRegister.RowHeadersDefaultCellStyle = dataGridViewCellStyle5;
             dgvStudentListRegister.RowHeadersVisible = false;
             dgvStudentListRegister.RowHeadersWidth = 51;
             dgvStudentListRegister.RowHeadersWidthSizeMode = DataGridViewRowHeadersWidthSizeMode.DisableResizing;
-            dataGridViewCellStyle3.SelectionBackColor = SystemColors.MenuHighlight;
-            dataGridViewCellStyle3.SelectionForeColor = Color.White;
-            dgvStudentListRegister.RowsDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.SelectionBackColor = SystemColors.MenuHighlight;
+            dataGridViewCellStyle6.SelectionForeColor = Color.White;
+            dgvStudentListRegister.RowsDefaultCellStyle = dataGridViewCellStyle6;
             dgvStudentListRegister.RowTemplate.Height = 40;
             dgvStudentListRegister.SelectionMode = DataGridViewSelectionMode.FullRowSelect;
             dgvStudentListRegister.Size = new Size(825, 754);
             dgvStudentListRegister.TabIndex = 2;
             dgvStudentListRegister.CellContentClick += dgvStudentListRegister_CellContentClick_1;
+            // 
+            // panel7
+            // 
+            panel7.Controls.Add(btnSearch);
+            panel7.Controls.Add(txtSearch);
+            panel7.Dock = DockStyle.Top;
+            panel7.Location = new Point(0, 0);
+            panel7.Name = "panel7";
+            panel7.Size = new Size(835, 75);
+            panel7.TabIndex = 0;
+            // 
+            // btnSearch
+            // 
+            btnSearch.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            btnSearch.Location = new Point(661, 15);
+            btnSearch.Name = "btnSearch";
+            btnSearch.Size = new Size(142, 40);
+            btnSearch.TabIndex = 7;
+            btnSearch.Text = "Clear";
+            btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // txtSearch
+            // 
+            txtSearch.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
+            txtSearch.Location = new Point(369, 15);
+            txtSearch.Name = "txtSearch";
+            txtSearch.PlaceholderText = "    Search bar";
+            txtSearch.Size = new Size(275, 40);
+            txtSearch.TabIndex = 3;
+            // 
+            // dtpBD
+            // 
+            dtpBD.CalendarTrailingForeColor = Color.LightGray;
+            dtpBD.CustomFormat = "dd/mm/yyyy";
+            dtpBD.Format = DateTimePickerFormat.Custom;
+            dtpBD.Location = new Point(359, 102);
+            dtpBD.MaxDate = new DateTime(2030, 12, 31, 0, 0, 0, 0);
+            dtpBD.MinDate = new DateTime(2000, 12, 1, 0, 0, 0, 0);
+            dtpBD.Name = "dtpBD";
+            dtpBD.Size = new Size(268, 40);
+            dtpBD.TabIndex = 28;
             // 
             // ColumnID
             // 
@@ -543,13 +575,29 @@
             ColumnID.Visible = false;
             ColumnID.Width = 40;
             // 
-            // ColumnName
+            // ColumnFirstName
             // 
-            ColumnName.HeaderText = "Name";
-            ColumnName.MinimumWidth = 140;
-            ColumnName.Name = "ColumnName";
-            ColumnName.ReadOnly = true;
-            ColumnName.Visible = false;
+            ColumnFirstName.HeaderText = "First Name";
+            ColumnFirstName.MinimumWidth = 140;
+            ColumnFirstName.Name = "ColumnFirstName";
+            ColumnFirstName.ReadOnly = true;
+            ColumnFirstName.Visible = false;
+            // 
+            // ColumnLastName
+            // 
+            ColumnLastName.HeaderText = "Last Name";
+            ColumnLastName.MinimumWidth = 6;
+            ColumnLastName.Name = "ColumnLastName";
+            ColumnLastName.ReadOnly = true;
+            ColumnLastName.Visible = false;
+            // 
+            // ColumnDOB
+            // 
+            ColumnDOB.HeaderText = "Birth Date";
+            ColumnDOB.MinimumWidth = 6;
+            ColumnDOB.Name = "ColumnDOB";
+            ColumnDOB.ReadOnly = true;
+            ColumnDOB.Visible = false;
             // 
             // ColumnGender
             // 
@@ -559,90 +607,31 @@
             ColumnGender.ReadOnly = true;
             ColumnGender.Visible = false;
             // 
-            // ColumnEmail
+            // ColumnPhone
             // 
-            ColumnEmail.HeaderText = "Email";
-            ColumnEmail.MinimumWidth = 160;
-            ColumnEmail.Name = "ColumnEmail";
-            ColumnEmail.ReadOnly = true;
-            ColumnEmail.Visible = false;
+            ColumnPhone.HeaderText = "Phone";
+            ColumnPhone.MinimumWidth = 6;
+            ColumnPhone.Name = "ColumnPhone";
+            ColumnPhone.ReadOnly = true;
+            ColumnPhone.Visible = false;
             // 
-            // ColumnPassword
+            // ColumnAddress
             // 
-            ColumnPassword.HeaderText = "Password";
-            ColumnPassword.MinimumWidth = 140;
-            ColumnPassword.Name = "ColumnPassword";
-            ColumnPassword.ReadOnly = true;
-            ColumnPassword.Visible = false;
+            ColumnAddress.HeaderText = "Address";
+            ColumnAddress.MinimumWidth = 6;
+            ColumnAddress.Name = "ColumnAddress";
+            ColumnAddress.ReadOnly = true;
+            ColumnAddress.Visible = false;
             // 
-            // ColumnDOB
+            // Pictures
             // 
-            ColumnDOB.HeaderText = "DOB";
-            ColumnDOB.MinimumWidth = 6;
-            ColumnDOB.Name = "ColumnDOB";
-            ColumnDOB.ReadOnly = true;
-            ColumnDOB.Visible = false;
-            // 
-            // ColumnActive
-            // 
-            ColumnActive.HeaderText = "Active";
-            ColumnActive.MinimumWidth = 6;
-            ColumnActive.Name = "ColumnActive";
-            ColumnActive.ReadOnly = true;
-            ColumnActive.Visible = false;
-            // 
-            // ColumnScore
-            // 
-            ColumnScore.HeaderText = "Score";
-            ColumnScore.MinimumWidth = 6;
-            ColumnScore.Name = "ColumnScore";
-            ColumnScore.ReadOnly = true;
-            ColumnScore.Visible = false;
-            // 
-            // ColumnSession
-            // 
-            ColumnSession.HeaderText = "Session";
-            ColumnSession.MinimumWidth = 6;
-            ColumnSession.Name = "ColumnSession";
-            ColumnSession.ReadOnly = true;
-            ColumnSession.Visible = false;
-            // 
-            // ColumnStatus
-            // 
-            ColumnStatus.HeaderText = "Status";
-            ColumnStatus.MinimumWidth = 6;
-            ColumnStatus.Name = "ColumnStatus";
-            ColumnStatus.ReadOnly = true;
-            ColumnStatus.Visible = false;
-            // 
-            // panel7
-            // 
-            panel7.Controls.Add(button2);
-            panel7.Controls.Add(textBox1);
-            panel7.Dock = DockStyle.Top;
-            panel7.Location = new Point(0, 0);
-            panel7.Name = "panel7";
-            panel7.Size = new Size(835, 75);
-            panel7.TabIndex = 0;
-            // 
-            // button2
-            // 
-            button2.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            button2.Location = new Point(661, 15);
-            button2.Name = "button2";
-            button2.Size = new Size(142, 40);
-            button2.TabIndex = 7;
-            button2.Text = "Clear";
-            button2.UseVisualStyleBackColor = true;
-            // 
-            // textBox1
-            // 
-            textBox1.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Right;
-            textBox1.Location = new Point(369, 15);
-            textBox1.Name = "textBox1";
-            textBox1.PlaceholderText = "    Search bar";
-            textBox1.Size = new Size(275, 40);
-            textBox1.TabIndex = 3;
+            Pictures.HeaderText = "ColumnPicture";
+            Pictures.Image = (Image)resources.GetObject("Pictures.Image");
+            Pictures.MinimumWidth = 6;
+            Pictures.Name = "Pictures";
+            Pictures.ReadOnly = true;
+            Pictures.Resizable = DataGridViewTriState.False;
+            Pictures.SortMode = DataGridViewColumnSortMode.Automatic;
             // 
             // FrmAddNewUser
             // 
@@ -659,7 +648,7 @@
             pnInfoInput.PerformLayout();
             pnPicture.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)picUrl).EndInit();
-            groupBox1.ResumeLayout(false);
+            gbGender.ResumeLayout(false);
             panel4.ResumeLayout(false);
             panel4.PerformLayout();
             panel1.ResumeLayout(false);
@@ -667,7 +656,6 @@
             panel5.ResumeLayout(false);
             pnDataGrid.ResumeLayout(false);
             panel6.ResumeLayout(false);
-            panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dgvStudentListRegister).EndInit();
             panel7.ResumeLayout(false);
             panel7.PerformLayout();
@@ -681,49 +669,47 @@
         private Panel panel1;
         private Panel panel3;
         private Button btnAddNew;
-        private Button btnUpdate;
-        private Button btnGetData;
+        private Button btnRemove;
+        private Button btnEdit;
         private Button btnClear;
         private Panel pnInfoInput;
         private PictureBox picUrl;
         private Label label10;
         private Label label9;
-        private GroupBox groupBox1;
+        private GroupBox gbGender;
         private Panel panel4;
         private RadioButton rbtnFemale;
         private RadioButton rbtnMale;
         private Label label4;
-        private TextBox txtName;
         private Label label5;
-        private TextBox txtPassCf;
+        private TextBox txtLastName;
         private Label label3;
         private TextBox txtPhotoUrl;
-        private TextBox txtPassword;
+        private TextBox txtFirstName;
         private Label label2;
-        private TextBox txtEmail;
+        private TextBox txtId;
         private Panel panel5;
         private Panel pnDataGrid;
         private Panel panel7;
         private DataGridView dgvStudentListRegister;
-        private DataGridViewTextBoxColumn ColumnID;
-        private DataGridViewTextBoxColumn ColumnName;
-        private DataGridViewTextBoxColumn ColumnGender;
-        private DataGridViewTextBoxColumn ColumnEmail;
-        private DataGridViewTextBoxColumn ColumnPassword;
-        private DataGridViewTextBoxColumn ColumnDOB;
-        private DataGridViewTextBoxColumn ColumnActive;
-        private DataGridViewTextBoxColumn ColumnScore;
-        private DataGridViewTextBoxColumn ColumnSession;
-        private DataGridViewTextBoxColumn ColumnStatus;
-        private Button button2;
-        private TextBox textBox1;
+        private Button btnSearch;
+        private TextBox txtSearch;
         private Panel panel6;
         private Label label12;
-        private Label label13;
-        private TextBox textBox3;
-        private TextBox textBox4;
+        private Label lbStuCount;
+        private TextBox txtPhone;
+        private TextBox txtAddress;
         private Panel pnPicture;
-        private Button button3;
-        private Button button5;
+        private Button btnUpload;
+        private Button btnDownload;
+        private DateTimePicker dtpBD;
+        private DataGridViewTextBoxColumn ColumnID;
+        private DataGridViewTextBoxColumn ColumnFirstName;
+        private DataGridViewTextBoxColumn ColumnLastName;
+        private DataGridViewTextBoxColumn ColumnDOB;
+        private DataGridViewTextBoxColumn ColumnGender;
+        private DataGridViewTextBoxColumn ColumnPhone;
+        private DataGridViewTextBoxColumn ColumnAddress;
+        private DataGridViewImageColumn Pictures;
     }
 }
