@@ -28,10 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddNewUser));
             DataGridViewCellStyle dataGridViewCellStyle1 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle2 = new DataGridViewCellStyle();
             DataGridViewCellStyle dataGridViewCellStyle3 = new DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmAddNewUser));
             label1 = new Label();
             tableLayoutPanel1 = new TableLayoutPanel();
             pnInfoInput = new Panel();
@@ -188,7 +188,7 @@
             // picUrl
             // 
             picUrl.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
-            picUrl.Image = (Image)resources.GetObject("picUrl.Image");
+            picUrl.Image = Properties.Resources.Group;
             picUrl.Location = new Point(4, 3);
             picUrl.Name = "picUrl";
             picUrl.Size = new Size(208, 198);
