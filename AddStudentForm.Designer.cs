@@ -124,7 +124,7 @@
             pnBody.Location = new Point(30, 181);
             pnBody.Name = "pnBody";
             pnBody.Padding = new Padding(6, 30, 6, 6);
-            pnBody.Size = new Size(380, 390);
+            pnBody.Size = new Size(380, 423);
             pnBody.TabIndex = 29;
             // 
             // label10
@@ -154,7 +154,7 @@
             txtAddress.Multiline = true;
             txtAddress.Name = "txtAddress";
             txtAddress.PlaceholderText = "    Character range allow (8 ~ 255)";
-            txtAddress.Size = new Size(252, 71);
+            txtAddress.Size = new Size(252, 104);
             txtAddress.TabIndex = 32;
             // 
             // txtPhone
@@ -257,7 +257,7 @@
             pnButtom.Controls.Add(btnCancel);
             pnButtom.Controls.Add(btnAdd);
             pnButtom.Dock = DockStyle.Bottom;
-            pnButtom.Location = new Point(30, 567);
+            pnButtom.Location = new Point(30, 600);
             pnButtom.Name = "pnButtom";
             pnButtom.Padding = new Padding(6, 30, 6, 6);
             pnButtom.Size = new Size(380, 62);
@@ -292,7 +292,7 @@
             // 
             AutoScaleMode = AutoScaleMode.None;
             CancelButton = btnCancel;
-            ClientSize = new Size(440, 629);
+            ClientSize = new Size(440, 662);
             ControlBox = false;
             Controls.Add(pnButtom);
             Controls.Add(pnBody);
